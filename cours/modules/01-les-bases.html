@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -91,6 +92,76 @@ string saisie = Console.ReadLine();  // Lit du texte</code></pre>
       <div class="exercices">
         <h3>📝 Exercices</h3>
         <p>Fais les exercices dans <code>01-Les-Bases/Ex01-Variables</code> et <code>Ex02-CalculSimple</code> !</p>
+        <p style="margin-top: 0.75rem;">
+          <strong>Essayer en ligne :</strong> Tu peux aussi tester ton code directement dans le navigateur sur 
+          <a href="https://dotnetfiddle.net/" target="_blank" rel="noopener">.NET Fiddle</a> — copie ton code, exécute-le et vois le résultat.
+        </p>
+        <p style="margin-top: 0.5rem;">
+          <strong>Une erreur ?</strong> Consulte la page <a href="erreurs-courantes.html">Erreurs courantes</a> pour des indices sur les messages du compilateur (CS0116, CS0103, etc.).
+        </p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>📝 Exercices en ligne</h3>
+        <p style="margin-bottom: 1rem;">Édite le code et clique sur <strong>▶ Lancer</strong> pour exécuter.</p>
+
+        <div class="exercise-card">
+          <h4>Ex01 — Variables</h4>
+          <p class="exercise-desc">Déclare nom et age, affiche : "Je m'appelle [nom] et j'ai [age] ans."</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="12" spellcheck="false">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 1. Déclare string nom avec ton prénom
+        // 2. Déclare int age avec ton âge
+        // 3. Affiche avec Console.WriteLine et l'interpolation $""
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-card">
+          <h4>Ex02 — Calcul simple</h4>
+          <p class="exercise-desc">Crée a=15 et b=7. Affiche : a+b, a-b, a*b, a/b (entier), et a/b en décimal avec (double)a/b.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="14" spellcheck="false">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int a = 15;
+        int b = 7;
+        // Affiche les 5 opérations (+, -, *, / entier, / décimal)
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+          <a href="https://dotnetfiddle.net/" target="_blank" rel="noopener">.NET Fiddle</a> — <a href="erreurs-courantes.html">Erreurs courantes</a>
+        </p>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -99,5 +170,6 @@ string saisie = Console.ReadLine();  // Lit du texte</code></pre>
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

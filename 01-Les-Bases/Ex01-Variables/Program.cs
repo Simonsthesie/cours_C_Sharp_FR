@@ -20,12 +20,8 @@ namespace Ex01_Variables;
 
 class Program
 {
-    int age = 25;
-    string nom = "Alice";
     static void Main(string[] args)
     {
         // Écris ton code ici !
-     
-     Console.WriteLine($"Je m'appelle {nom} et j'ai {age} ans.");
     }
 }

@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -85,7 +86,35 @@ foreach (string nom in noms)
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais les exercices dans <code>03-Structures-De-Controle/Ex01-Majorite</code> et <code>Ex02-Boucle</code> !</p>
+        <p>Fais les exercices dans <code>03-Structures-De-Controle/Ex01-Majorite</code> et <code>Ex02-Boucle</code> ou ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex02 — Boucle for</h4>
+          <p class="exercise-desc">Affiche les nombres pairs de 0 à 20 (0, 2, 4, 6... 20). Indice : for (int i = 0; i &lt;= 20; i += 2)</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="14" spellcheck="false">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Boucle for pour afficher 0, 2, 4, 6... 20
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -94,5 +123,6 @@ foreach (string nom in noms)
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

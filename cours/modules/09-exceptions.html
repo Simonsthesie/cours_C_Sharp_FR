@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -78,7 +79,41 @@ finally
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais l'exercice dans <code>09-Exceptions/Ex01-TryCatch</code> !</p>
+        <p>Fais l'exercice dans <code>09-Exceptions/Ex01-TryCatch</code> ou ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex01 — try/catch et int.Parse</h4>
+          <p class="exercise-desc">Console.Write("Entrez un nombre : "), puis dans un try : int.Parse(Console.ReadLine()) et affiche le double. catch (FormatException) : "Veuillez entrer un nombre valide". L'entrée se simule ci-dessous.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="22" spellcheck="false">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Entrez un nombre : ");
+        // try { int.Parse(Console.ReadLine()), affiche n*2 }
+        // catch (FormatException) { "Veuillez entrer un nombre valide" }
+    }
+}</textarea>
+            <div class="stdin-row">
+              <label>Entrée simulée (pour Console.ReadLine) :</label>
+              <input type="text" class="csharp-stdin" value="42" placeholder="ex: 42">
+            </div>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -87,5 +122,6 @@ finally
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -76,7 +77,41 @@ public int Vitesse
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais l'exercice dans <code>06-Classes-POO/Ex01-Classe</code> — crée une classe CompteBancaire !</p>
+        <p>Fais l'exercice dans <code>06-Classes-POO/Ex01-Classe</code> ou ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex01 — Classe CompteBancaire</h4>
+          <p class="exercise-desc">Classe avec attribut solde (double), méthodes Deposer(montant), Retirer(montant), AfficherSolde(). Dans Main : crée un compte, dépose 100, retire 30, affiche.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="35" spellcheck="false">using System;
+
+// Écris ta classe CompteBancaire ici
+// - attribut : solde (double)
+// - Deposer(double montant)
+// - Retirer(double montant)
+// - AfficherSolde()
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Instancie CompteBancaire, dépose 100, retire 30, affiche le solde
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -85,5 +120,6 @@ public int Vitesse
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

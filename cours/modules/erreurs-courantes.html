@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erreurs courantes et indices | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .error-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #f87171;
+    }
+    .error-card .code { color: #f87171; font-weight: 600; font-size: 1rem; }
+    .error-card .indice {
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .error-card .indice strong { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Erreurs courantes</span>
+    </div>
+
+    <article class="page-content">
+      <h1>Erreurs courantes et indices</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">
+        Tu as une erreur de compilation ? Consulte cette page pour trouver une explication et un indice pour la corriger.
+      </p>
+
+      <div class="error-card">
+        <span class="code">CS0116</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> Un espace de noms ne peut pas contenir directement des membres tels que des champs, des méthodes ou des instructions.
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> En C#, tout le code doit être à l'intérieur d'une classe. Les variables et méthodes ne peuvent pas être déclarées directement dans le <code>namespace</code> — place-les dans une classe, et le code exécutable dans la méthode <code>Main</code>.
+        </div>
+        <pre style="margin-top: 1rem;"><code>// ❌ Erreur
+namespace MonProgramme;
+int age = 25;  // Variable au mauvais endroit
+
+// ✅ Correct
+namespace MonProgramme;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int age = 25;  // Variable dans Main
+    }
+}</code></pre>
+      </div>
+
+      <div class="error-card">
+        <span class="code">CS0120</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> Une référence d'objet est requise pour le champ, la méthode ou la propriété non statique 'XXX'
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> <code>Main</code> est <code>static</code>, donc elle ne peut accéder qu'aux champs/méthodes <code>static</code>. Soit mets tes variables dans <code>Main</code> (variables locales), soit déclare tes champs avec <code>static</code>.
+        </div>
+      </div>
+
+      <div class="error-card">
+        <span class="code">CS0103</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> Le nom 'XXX' n'existe pas dans le contexte actuel.
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> Tu utilises une variable qui n'est pas déclarée ou pas visible. Vérifie l'orthographe et que la variable est déclarée avant d'être utilisée. Attention à la portée (scope) : une variable déclarée dans un bloc <code>{ }</code> n'existe pas en dehors.
+        </div>
+      </div>
+
+      <div class="error-card">
+        <span class="code">CS0246</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> Le type ou le nom d'espace de noms 'XXX' est introuvable.
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> Le compilateur ne trouve pas le type. Vérifie : 1) l'orthographe (sensible à la casse), 2) que tu as bien <code>using System;</code> en haut si tu utilises <code>Console</code>, <code>String</code>, etc.
+        </div>
+      </div>
+
+      <div class="error-card">
+        <span class="code">CS0029</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> Impossible de convertir implicitement le type 'X' en 'Y'.
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> Tu assignes un type à un autre incompatible (ex : <code>double</code> dans un <code>int</code>). Utilise un cast explicite si nécessaire : <code>(int)3.14</code>, ou change le type de la variable.
+        </div>
+      </div>
+
+      <div class="error-card">
+        <span class="code">CS1002</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> ; attendu
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> Il manque un point-virgule à la fin d'une instruction. En C#, chaque instruction se termine par <code>;</code>.
+        </div>
+      </div>
+
+      <div class="error-card">
+        <span class="code">CS1003</span>
+        <p style="margin: 0.5rem 0 0; color: var(--text-muted);">
+          <strong>Message :</strong> Erreur de syntaxe, '(' attendu (ou autre symbole)
+        </p>
+        <div class="indice">
+          <strong>💡 Indice :</strong> Vérifie les parenthèses, accolades et crochets. Chaque <code>(</code> doit avoir un <code>)</code>, chaque <code>{</code> un <code>}</code>. L'erreur indique souvent la ligne où le compilateur a compris que quelque chose manquait.
+        </div>
+      </div>
+
+      <div class="objectifs" style="margin-top: 2rem;">
+        <h3>Tu ne trouves pas ton erreur ?</h3>
+        <p>Copie le code d'erreur (ex : CS0116) dans un moteur de recherche avec "C#" pour plus de détails. Les <a href="https://learn.microsoft.com/fr-fr/dotnet/csharp/language-reference/compiler-messages/">messages du compilateur C#</a> sur Microsoft Docs sont une excellente ressource.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

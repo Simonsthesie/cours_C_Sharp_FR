@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -84,7 +85,36 @@ x--;   // x devient 6 (décrémentation)</code></pre>
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais l'exercice dans <code>02-Operateurs/Ex01-Comparaisons</code> !</p>
+        <p>Fais l'exercice dans <code>02-Operateurs/Ex01-Comparaisons</code> ou directement ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex01 — Comparaisons et logique</h4>
+          <p class="exercise-desc">Déclare age=20. Affiche true/false pour : age>=18 (majeur ?), age&lt;25 (jeune ?), age>=18 && age&lt;25.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="14" spellcheck="false">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int age = 20;
+        // Affiche age >= 18, age < 25, et les deux combinés (&&)
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -93,5 +123,6 @@ x--;   // x devient 6 (décrémentation)</code></pre>
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

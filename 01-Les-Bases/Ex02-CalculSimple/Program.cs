@@ -21,8 +21,5 @@ class Program
     static void Main(string[] args)
     {
         // Écris ton code ici !
-        
-        
-        
     }
 }

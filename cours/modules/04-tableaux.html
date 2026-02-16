@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -62,7 +63,38 @@ grille[0, 0] = 1;</code></pre>
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais l'exercice dans <code>04-Tableaux-Collections/Ex01-Tableau</code> !</p>
+        <p>Fais l'exercice dans <code>04-Tableaux-Collections/Ex01-Tableau</code> ou ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex01 — Tableau et moyenne</h4>
+          <p class="exercise-desc">Tableau {12,15,8,20,10}. Calcule la moyenne (somme/Length) et trouve le maximum.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="18" spellcheck="false">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] nombres = { 12, 15, 8, 20, 10 };
+        // Calcule la moyenne (pense au cast (double) pour la division)
+        // Trouve le max avec une boucle
+        // Affiche les deux
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -71,5 +103,6 @@ grille[0, 0] = 1;</code></pre>
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

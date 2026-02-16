@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -67,6 +68,40 @@ Choisir : 1=Ajouter, 2=Terminer, 3=Afficher, 4=Quitter</code></pre>
         </ul>
       </div>
 
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Démo en ligne</h3>
+        <p style="margin-bottom: 1rem;">Version simplifiée (sans menu interactif) — le projet complet se fait en local avec <code>dotnet run</code>.</p>
+        <div class="exercise-card">
+          <h4>Gestionnaire de tâches (version courte)</h4>
+          <p class="exercise-desc">Classe Tache (Titre, EstTerminee). Liste de tâches, affiche avec [ ] ou [X]. Le menu interactif se fait en local avec dotnet run.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="35" spellcheck="false">using System;
+using System.Collections.Generic;
+
+// class Tache { string Titre; bool EstTerminee; }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List&lt;Tache&gt; taches = new List&lt;Tache&gt;();
+        // Ajoute 2-3 tâches (certaines terminées)
+        // Affiche la liste : "1. [ ] Titre" ou "2. [X] Titre"
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p style="margin-top: 2rem; font-size: 1.1rem;">Bonne chance ! 🚀</p>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -75,5 +110,6 @@ Choisir : 1=Ajouter, 2=Terminer, 3=Afficher, 4=Quitter</code></pre>
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

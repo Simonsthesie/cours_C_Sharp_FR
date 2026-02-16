@@ -363,3 +363,122 @@ a:hover {
 .module-nav span {
   color: var(--border);
 }
+
+/* Code runner */
+.code-runner {
+  margin: 1rem 0;
+}
+.code-runner textarea.csharp-code {
+  width: 100%;
+  padding: 1rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: #a5b4fc;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+}
+.code-runner textarea.csharp-code:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.2);
+}
+.code-runner .stdin-row {
+  margin-bottom: 0.5rem;
+}
+.code-runner .stdin-row label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.code-runner input.csharp-stdin {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.runner-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.btn-run {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-run:hover {
+  background: var(--accent-dim);
+}
+.btn-run:active {
+  transform: scale(0.98);
+}
+.btn-run:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.run-status {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.run-output {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+.run-output-header {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+.run-output pre.run-result {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+.run-error {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 0.9rem;
+}
+.exercise-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.exercise-card h4 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.exercise-card .exercise-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}

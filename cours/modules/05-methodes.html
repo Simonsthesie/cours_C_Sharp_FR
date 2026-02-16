@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -68,7 +69,39 @@ int resultat = Additionner(5, 3);  // 8</code></pre>
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais l'exercice dans <code>05-Methodes/Ex01-Methode</code> !</p>
+        <p>Fais l'exercice dans <code>05-Methodes/Ex01-Methode</code> ou ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex01 — Méthodes EstPair et Max</h4>
+          <p class="exercise-desc">Crée EstPair(int n) qui retourne true si n est pair. Crée Max(int a, int b). Teste dans Main.</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="22" spellcheck="false">using System;
+
+class Program
+{
+    // static bool EstPair(int n) { ... }  // n % 2 == 0
+    // static int Max(int a, int b) { ... }
+
+    static void Main(string[] args)
+    {
+        // Teste EstPair(4) -> true, EstPair(7) -> false
+        // Teste Max(5, 10) -> 10
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -77,5 +110,6 @@ int resultat = Additionner(5, 3);  // 8</code></pre>
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>

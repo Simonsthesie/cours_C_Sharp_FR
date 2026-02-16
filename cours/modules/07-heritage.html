@@ -11,6 +11,7 @@
     <div class="container">
       <a href="../index.html" class="logo">Cours <span>C#</span></a>
       <a href="../index.html">Accueil</a>
+      <a href="erreurs-courantes.html">Erreurs courantes</a>
     </div>
   </nav>
 
@@ -81,7 +82,40 @@ a.Parler();  // Affiche "Wouf !" car c'est un Chien</code></pre>
 
       <div class="exercices">
         <h3>📝 Exercices</h3>
-        <p>Fais l'exercice dans <code>07-Heritage-Polymorphisme/Ex01-Formes</code> — Forme, Cercle, Rectangle !</p>
+        <p>Fais l'exercice dans <code>07-Heritage-Polymorphisme/Ex01-Formes</code> ou ci-dessous !</p>
+      </div>
+
+      <div class="objectifs" style="margin-top: 1.5rem;">
+        <h3>Exercice en ligne</h3>
+        <div class="exercise-card">
+          <h4>Ex01 — Héritage Forme, Cercle, Rectangle</h4>
+          <p class="exercise-desc">Forme avec Afficher() virtuelle ("Je suis une forme"). Cercle et Rectangle héritent et override. Main : tableau de Forme avec 1 Cercle + 1 Rectangle, parcours et appelle Afficher().</p>
+          <div class="code-runner">
+            <textarea class="csharp-code" rows="32" spellcheck="false">using System;
+
+// Classe Forme avec virtual void Afficher()
+// Classe Cercle : Forme, override Afficher() -> "Je suis un cercle"
+// Classe Rectangle : Forme, override Afficher() -> "Je suis un rectangle"
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Tableau Forme[] avec new Cercle() et new Rectangle()
+        // foreach et appelle Afficher() sur chaque
+    }
+}</textarea>
+            <div class="runner-actions">
+              <button type="button" class="btn-run">▶ Lancer</button>
+              <span class="run-status"></span>
+            </div>
+            <div class="run-output" style="display: none;">
+              <div class="run-output-header">Résultat</div>
+              <pre class="run-result"></pre>
+              <div class="run-error" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
@@ -90,5 +124,6 @@ a.Parler();  // Affiche "Wouf !" car c'est un Chien</code></pre>
       </div>
     </article>
   </main>
+  <script src="../js/code-runner.js"></script>
 </body>
 </html>
