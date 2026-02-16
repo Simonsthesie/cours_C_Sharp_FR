@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 04 - Tableaux et collections | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 04</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 04</p>
+      <h1>Tableaux et collections</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Créer et manipuler des tableaux</li>
+          <li>Utiliser les listes (List&lt;T&gt;)</li>
+          <li>Parcourir les collections avec foreach</li>
+        </ul>
+      </div>
+
+      <h2>1. Tableaux (array)</h2>
+      <pre><code>// Déclaration et initialisation
+int[] nombres = { 1, 2, 3, 4, 5 };
+string[] noms = new string[3];  // 3 cases vides
+
+// Accès
+nombres[0] = 10;      // Premier élément
+int len = nombres.Length;  // Taille
+
+// Parcours
+foreach (int n in nombres)
+    Console.WriteLine(n);</code></pre>
+
+      <h2>2. List&lt;T&gt; (liste dynamique)</h2>
+      <pre><code>using System.Collections.Generic;
+
+List<string> fruits = new List<string>();
+fruits.Add("Pomme");
+fruits.Add("Banane");
+fruits.Remove("Pomme");
+int count = fruits.Count;</code></pre>
+
+      <h2>3. Tableau à deux dimensions</h2>
+      <pre><code>int[,] grille = new int[3, 3];
+grille[0, 0] = 1;</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais l'exercice dans <code>04-Tableaux-Collections/Ex01-Tableau</code> !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="03-structures.html" class="btn-back">← Module 03</a>
+        <a href="05-methodes.html" class="btn-back">Module 05 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

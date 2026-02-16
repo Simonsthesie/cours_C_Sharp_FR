@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 01 - Les Bases | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 01</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 01</p>
+      <h1>Les bases : variables et types</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Comprendre la structure d'un programme C#</li>
+          <li>Déclarer et utiliser des variables</li>
+          <li>Connaître les types de données de base</li>
+        </ul>
+      </div>
+
+      <h2>1. Structure d'un programme C#</h2>
+      <pre><code>using System;  // Pour utiliser Console, etc.
+
+namespace MonProgramme
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Ton code ici !
+            Console.WriteLine("Bonjour !");
+        }
+    }
+}</code></pre>
+      <ul>
+        <li><strong>namespace</strong> : regroupe ton code</li>
+        <li><strong>class Program</strong> : le point d'entrée</li>
+        <li><strong>Main</strong> : la méthode qui s'exécute au démarrage</li>
+      </ul>
+
+      <h2>2. Les types de données</h2>
+      <table>
+        <thead>
+          <tr><th>Type C#</th><th>Description</th><th>Exemple</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>int</code></td><td>Nombre entier</td><td><code>42</code></td></tr>
+          <tr><td><code>double</code></td><td>Nombre décimal</td><td><code>3.14</code></td></tr>
+          <tr><td><code>float</code></td><td>Décimal (précision moindre)</td><td><code>3.14f</code></td></tr>
+          <tr><td><code>bool</code></td><td>Vrai ou Faux</td><td><code>true</code></td></tr>
+          <tr><td><code>char</code></td><td>Un seul caractère</td><td><code>'A'</code></td></tr>
+          <tr><td><code>string</code></td><td>Texte</td><td><code>"Bonjour"</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Déclarer une variable</h2>
+      <pre><code>int age = 25;
+string nom = "Alice";
+double prix = 19.99;
+
+// Déclaration sans valeur initiale
+int nombre;
+nombre = 10;</code></pre>
+
+      <h2>4. Afficher et lire</h2>
+      <pre><code>// Afficher
+Console.WriteLine("Texte");      // Avec retour à la ligne
+Console.Write("Texte");          // Sans retour à la ligne
+
+// Lire
+string saisie = Console.ReadLine();  // Lit du texte</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais les exercices dans <code>01-Les-Bases/Ex01-Variables</code> et <code>Ex02-CalculSimple</code> !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="../index.html" class="btn-back">← Accueil</a>
+        <a href="02-operateurs.html" class="btn-back" style="margin-left: auto;">Module 02 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

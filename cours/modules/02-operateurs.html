@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 02 - Opérateurs | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 02</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 02</p>
+      <h1>Opérateurs et expressions</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Maîtriser les opérateurs arithmétiques</li>
+          <li>Utiliser les opérateurs de comparaison</li>
+          <li>Comprendre les opérateurs logiques (et, ou, non)</li>
+        </ul>
+      </div>
+
+      <h2>1. Opérateurs arithmétiques</h2>
+      <table>
+        <thead>
+          <tr><th>Opérateur</th><th>Signification</th><th>Exemple</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3</code> → 8</td></tr>
+          <tr><td><code>-</code></td><td>Soustraction</td><td><code>5 - 3</code> → 2</td></tr>
+          <tr><td><code>*</code></td><td>Multiplication</td><td><code>5 * 3</code> → 15</td></tr>
+          <tr><td><code>/</code></td><td>Division</td><td><code>15 / 4</code> → 3 (int) ou 3.75 (double)</td></tr>
+          <tr><td><code>%</code></td><td>Modulo (reste)</td><td><code>15 % 4</code> → 3</td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. Opérateurs de comparaison</h2>
+      <p>Résultent en <code>bool</code> (true ou false) :</p>
+      <table>
+        <thead>
+          <tr><th>Opérateur</th><th>Signification</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>==</code></td><td>Égal à</td></tr>
+          <tr><td><code>!=</code></td><td>Différent de</td></tr>
+          <tr><td><code>&gt;</code></td><td>Supérieur à</td></tr>
+          <tr><td><code>&lt;</code></td><td>Inférieur à</td></tr>
+          <tr><td><code>&gt;=</code></td><td>Supérieur ou égal</td></tr>
+          <tr><td><code>&lt;=</code></td><td>Inférieur ou égal</td></tr>
+        </tbody>
+      </table>
+
+      <h2>3. Opérateurs logiques</h2>
+      <table>
+        <thead>
+          <tr><th>Opérateur</th><th>Signification</th><th>Exemple</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>&amp;&amp;</code></td><td>ET</td><td><code>age &gt; 18 &amp;&amp; age &lt; 65</code></td></tr>
+          <tr><td><code>||</code></td><td>OU</td><td><code>estEtudiant || estRetraite</code></td></tr>
+          <tr><td><code>!</code></td><td>NON</td><td><code>!estFerme</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. Opérateurs d'incrémentation</h2>
+      <pre><code>int x = 5;
+x++;   // x devient 6 (post-incrémentation)
+++x;   // x devient 7 (pré-incrémentation)
+x--;   // x devient 6 (décrémentation)</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais l'exercice dans <code>02-Operateurs/Ex01-Comparaisons</code> !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="01-les-bases.html" class="btn-back">← Module 01</a>
+        <a href="03-structures.html" class="btn-back">Module 03 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

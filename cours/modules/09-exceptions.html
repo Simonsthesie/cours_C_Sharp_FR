@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 09 - Exceptions | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 09</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 09</p>
+      <h1>Gestion des exceptions</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Utiliser try / catch pour gérer les erreurs</li>
+          <li>Connaître les exceptions courantes</li>
+          <li>Utiliser finally</li>
+        </ul>
+      </div>
+
+      <h2>1. try / catch</h2>
+      <pre><code>try
+{
+    int nombre = int.Parse("abc");  // Lève FormatException
+}
+catch (FormatException ex)
+{
+    Console.WriteLine("Erreur : " + ex.Message);
+}</code></pre>
+
+      <h2>2. catch multiples</h2>
+      <pre><code>catch (FormatException ex)
+{
+    Console.WriteLine("Format invalide");
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine("Division par zéro");
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Autre erreur : " + ex.Message);
+}</code></pre>
+
+      <h2>3. finally</h2>
+      <pre><code>try
+{
+    // Code
+}
+catch (Exception ex)
+{
+    // Gestion
+}
+finally
+{
+    // Toujours exécuté (fermeture fichier, etc.)
+}</code></pre>
+
+      <h2>4. Lancer une exception</h2>
+      <pre><code>if (age < 0)
+    throw new ArgumentException("L'âge ne peut pas être négatif");</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais l'exercice dans <code>09-Exceptions/Ex01-TryCatch</code> !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="08-interfaces.html" class="btn-back">← Module 08</a>
+        <a href="10-projet-final.html" class="btn-back">Module 10 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 03 - Structures de contrôle | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 03</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 03</p>
+      <h1>Structures de contrôle</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Utiliser if / else pour les conditions</li>
+          <li>Maîtriser le switch</li>
+          <li>Faire des boucles (for, while, foreach)</li>
+        </ul>
+      </div>
+
+      <h2>1. if / else if / else</h2>
+      <pre><code>if (age >= 18)
+{
+    Console.WriteLine("Tu es majeur.");
+}
+else if (age >= 12)
+{
+    Console.WriteLine("Tu es ado.");
+}
+else
+{
+    Console.WriteLine("Tu es enfant.");
+}</code></pre>
+
+      <h2>2. switch</h2>
+      <pre><code>switch (note)
+{
+    case 10:
+        Console.WriteLine("Passable");
+        break;
+    case 15:
+        Console.WriteLine("Bien !");
+        break;
+    default:
+        Console.WriteLine("Autre");
+        break;
+}</code></pre>
+
+      <h2>3. Boucle for</h2>
+      <pre><code>for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);  // 0, 1, 2, 3, 4
+}</code></pre>
+
+      <h2>4. Boucle while</h2>
+      <pre><code>int compteur = 0;
+while (compteur < 5)
+{
+    Console.WriteLine(compteur);
+    compteur++;
+}</code></pre>
+
+      <h2>5. foreach</h2>
+      <pre><code>string[] noms = { "Alice", "Bob", "Charlie" };
+foreach (string nom in noms)
+{
+    Console.WriteLine(nom);
+}</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais les exercices dans <code>03-Structures-De-Controle/Ex01-Majorite</code> et <code>Ex02-Boucle</code> !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="02-operateurs.html" class="btn-back">← Module 02</a>
+        <a href="04-tableaux.html" class="btn-back">Module 04 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

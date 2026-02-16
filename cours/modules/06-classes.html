@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 06 - Introduction à la POO | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 06</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 06</p>
+      <h1>Introduction à la POO (Programmation Orientée Objet)</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Créer une classe</li>
+          <li>Définir des attributs (champs) et des méthodes</li>
+          <li>Instancier des objets avec <code>new</code></li>
+        </ul>
+      </div>
+
+      <h2>1. Définir une classe</h2>
+      <pre><code>public class Voiture
+{
+    public string Marque;
+    public string Couleur;
+    
+    public void Klaxonner()
+    {
+        Console.WriteLine("Tut tut !");
+    }
+}</code></pre>
+
+      <h2>2. Créer un objet</h2>
+      <pre><code>Voiture maVoiture = new Voiture();
+maVoiture.Marque = "Renault";
+maVoiture.Couleur = "Rouge";
+maVoiture.Klaxonner();</code></pre>
+
+      <h2>3. Constructeur</h2>
+      <pre><code>public class Voiture
+{
+    public string Marque;
+    
+    public Voiture(string marque)
+    {
+        Marque = marque;
+    }
+}
+
+Voiture v = new Voiture("Peugeot");</code></pre>
+
+      <h2>4. Propriétés (get/set)</h2>
+      <pre><code>private int _vitesse;
+
+public int Vitesse
+{
+    get { return _vitesse; }
+    set { _vitesse = value; }
+}</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais l'exercice dans <code>06-Classes-POO/Ex01-Classe</code> — crée une classe CompteBancaire !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="05-methodes.html" class="btn-back">← Module 05</a>
+        <a href="07-heritage.html" class="btn-back">Module 07 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

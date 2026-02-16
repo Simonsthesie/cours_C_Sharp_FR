@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 10 - Projet Final | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 10</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 10</p>
+      <h1>Projet final — Gestionnaire de tâches</h1>
+
+      <div class="objectifs">
+        <h3>Objectif</h3>
+        <ul>
+          <li>Créer un minigestionnaire de tâches en console qui utilise tout ce que tu as appris !</li>
+        </ul>
+      </div>
+
+      <h2>Spécifications du projet</h2>
+
+      <h3>Fonctionnalités à implémenter</h3>
+      <ul>
+        <li><strong>Liste de tâches</strong> : stocker des tâches (titre, terminée oui/non)</li>
+        <li><strong>Ajouter une tâche</strong> : l'utilisateur entre le titre</li>
+        <li><strong>Marquer comme terminée</strong> : choisir par numéro</li>
+        <li><strong>Afficher la liste</strong> : numérotée, avec statut <code>[ ]</code> ou <code>[X]</code></li>
+        <li><strong>Quitter</strong> : boucle principale avec menu</li>
+      </ul>
+
+      <h3>Structure suggérée</h3>
+      <ul>
+        <li>Classe <code>Tache</code> (Titre, EstTerminee)</li>
+        <li>Liste <code>List&lt;Tache&gt;</code></li>
+        <li>Menu : 1=Ajouter, 2=Marquer terminée, 3=Afficher, 4=Quitter</li>
+      </ul>
+
+      <h3>Exemple d'affichage</h3>
+      <pre><code>--- Ma To-Do List ---
+1. [ ] Faire les courses
+2. [X] Apprendre le C#
+3. [ ] Réviser pour l'exam
+
+Choisir : 1=Ajouter, 2=Terminer, 3=Afficher, 4=Quitter</code></pre>
+
+      <div class="exercices">
+        <h3>Bonus</h3>
+        <ul>
+          <li>Sauvegarder/charger dans un fichier .txt</li>
+          <li>Supprimer une tâche</li>
+          <li>Filtrer (toutes / à faire / terminées)</li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 2rem; font-size: 1.1rem;">Bonne chance ! 🚀</p>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="09-exceptions.html" class="btn-back">← Module 09</a>
+        <a href="../index.html" class="btn-back">Accueil →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 05 - Méthodes | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 05</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 05</p>
+      <h1>Méthodes et paramètres</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Déclarer et appeler des méthodes</li>
+          <li>Utiliser des paramètres et valeurs de retour</li>
+          <li>Comprendre la portée des variables</li>
+        </ul>
+      </div>
+
+      <h2>1. Méthode simple</h2>
+      <pre><code>void DireBonjour()
+{
+    Console.WriteLine("Bonjour !");
+}
+
+// Appel
+DireBonjour();</code></pre>
+
+      <h2>2. Méthode avec paramètres</h2>
+      <pre><code>void Saluer(string nom)
+{
+    Console.WriteLine($"Bonjour {nom} !");
+}
+
+Saluer("Alice");</code></pre>
+
+      <h2>3. Méthode avec retour</h2>
+      <pre><code>int Additionner(int a, int b)
+{
+    return a + b;
+}
+
+int resultat = Additionner(5, 3);  // 8</code></pre>
+
+      <h2>4. Paramètres optionnels</h2>
+      <pre><code>void Afficher(string msg, int fois = 1)
+{
+    for (int i = 0; i < fois; i++)
+        Console.WriteLine(msg);
+}</code></pre>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais l'exercice dans <code>05-Methodes/Ex01-Methode</code> !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="04-tableaux.html" class="btn-back">← Module 04</a>
+        <a href="06-classes.html" class="btn-back">Module 06 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

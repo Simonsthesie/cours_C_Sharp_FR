@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 08 - Interfaces et abstraction | Cours C#</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../index.html" class="logo">Cours <span>C#</span></a>
+      <a href="../index.html">Accueil</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Module 08</span>
+    </div>
+
+    <article class="page-content">
+      <p class="module-num">Module 08</p>
+      <h1>Interfaces et abstraction</h1>
+
+      <div class="objectifs">
+        <h3>Objectifs</h3>
+        <ul>
+          <li>Définir et implémenter une interface</li>
+          <li>Comprendre la différence entre interface et classe abstraite</li>
+          <li>Utiliser les interfaces pour le découplage</li>
+        </ul>
+      </div>
+
+      <h2>1. Interface</h2>
+      <pre><code>public interface IVolant
+{
+    void Voler();
+}
+
+public class Oiseau : IVolant
+{
+    public void Voler()
+    {
+        Console.WriteLine("L'oiseau s'envole !");
+    }
+}</code></pre>
+
+      <h2>2. Classe abstraite</h2>
+      <pre><code>public abstract class Animal
+{
+    public abstract void Parler();
+    
+    public void Dormir()
+    {
+        Console.WriteLine("Zzz...");
+    }
+}
+
+public class Chien : Animal
+{
+    public override void Parler() => Console.WriteLine("Wouf !");
+}</code></pre>
+
+      <h2>3. Interface vs Classe abstraite</h2>
+      <table>
+        <thead>
+          <tr><th>Interface</th><th>Classe abstraite</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pas de code (sauf défaut)</td><td>Peut avoir du code</td></tr>
+          <tr><td>Héritage multiple</td><td>Héritage simple</td></tr>
+          <tr><td>Contrat pur</td><td>Classe de base partielle</td></tr>
+        </tbody>
+      </table>
+
+      <div class="exercices">
+        <h3>📝 Exercices</h3>
+        <p>Fais l'exercice dans <code>08-Interfaces-Abstraction/Ex01-Interface</code> — IAffichable !</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem;">
+        <a href="07-heritage.html" class="btn-back">← Module 07</a>
+        <a href="09-exceptions.html" class="btn-back">Module 09 →</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
